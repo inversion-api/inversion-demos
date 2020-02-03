@@ -1,0 +1,29 @@
+
+plugins {
+  id "java-library"
+}
+
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+repositories {
+	jcenter()
+	mavenCentral()
+	maven { url 'https://oss.jfrog.org/artifactory/oss-snapshot-local' }
+}
+
+dependencies {
+
+    compile "io.inversion:inversion-dynamodb:${inversionVersion}"
+    compile "io.inversion:inversion-elasticsearch:${inversionVersion}"
+    compile "io.inversion:inversion-kinesis:${inversionVersion}"
+    compile "io.inversion:inversion-lambda:${inversionVersion}"
+    compile "io.inversion:inversion-redis:${inversionVersion}"
+    compile "io.inversion:inversion-s3:${inversionVersion}"
+    compile "io.inversion:inversion-script:${inversionVersion}"
+    compile "io.inversion:inversion-spring-boot:${inversionVersion}"
+
+	testCompile 'junit:junit:4.12'
+}
+
